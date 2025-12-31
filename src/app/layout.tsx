@@ -84,12 +84,21 @@ export const metadata = {
     title: "Harsh Jadhav — Builder, Shipper, Learner",
     description: "Building things that people use. Shipping fast, learning faster. Currently neck-deep in Solana and Web3.",
     siteName: "Harsh Jadhav",
+    images: [
+      {
+        url: "https://harshjadhav.dev/image.png",
+        width: 1200,
+        height: 630,
+        alt: "Harsh Jadhav",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Harsh Jadhav — Builder, Shipper, Learner",
     description: "Building things that people use. Shipping fast, learning faster. Currently neck-deep in Solana and Web3.",
     creator: "@theharshjadhav",
+    images: ["https://harshjadhav.dev/image.png"],
   },
   icons: {
     icon: '/favicon.svg',
