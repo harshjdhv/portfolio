@@ -168,29 +168,35 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
           >
-            <h2 className="instrument-serif text-2xl tracking-tight">Subscribe</h2>
-            <p className="jetbrains-mono text-xs text-muted-foreground tracking-tight">Get notified when I publish something new.</p>
-            <form onSubmit={handleSubscribe} className="flex gap-2">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@example.com"
-                className="flex-1 px-3 py-2 jetbrains-mono text-xs bg-background border border-dashed rounded-sm focus:outline-none focus:border-foreground/40 transition-colors"
-                required
-                disabled={isSubmitting}
-              />
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="px-4 py-2 jetbrains-mono text-xs border border-dashed rounded-sm hover:bg-muted/20 transition-colors disabled:opacity-50"
-              >
-                {isSubmitting ? '...' : 'Subscribe'}
-              </button>
-            </form>
-            {message && (
-              <p className="jetbrains-mono text-xs mt-2 text-muted-foreground tracking-tight">{message}</p>
-            )}
+            <div className="flex flex-col items-center text-center py-8">
+              <h2 className="instrument-serif text-3xl tracking-tight mb-2">Stay in the loop</h2>
+              <p className="jetbrains-mono text-xs text-muted-foreground tracking-tight mb-6">
+                No spam. Just updates when I ship something worth sharing.
+              </p>
+              <form onSubmit={handleSubscribe} className="w-full max-w-sm">
+                <div className="flex items-center border border-dashed rounded-sm overflow-hidden">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="your@email.com"
+                    className="flex-1 px-4 py-3 jetbrains-mono text-xs bg-transparent focus:outline-none"
+                    required
+                    disabled={isSubmitting}
+                  />
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="px-4 py-3 jetbrains-mono text-xs bg-foreground text-background hover:bg-foreground/90 transition-colors disabled:opacity-50"
+                  >
+                    {isSubmitting ? '...' : 'Subscribe'}
+                  </button>
+                </div>
+                {message && (
+                  <p className="jetbrains-mono text-xs text-muted-foreground tracking-tight mt-3">{message}</p>
+                )}
+              </form>
+            </div>
           </motion.section>
 
           {/* Footer */}
