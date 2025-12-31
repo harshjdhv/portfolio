@@ -48,7 +48,7 @@ const ProjectsSection = () => {
     return (
         <section className="flex flex-col gap-6">
             <div className="flex items-center justify-between">
-                <h2 className="jetbrains-mono text-sm font-medium tracking-tight">Projects</h2>
+                <h2 className="instrument-serif text-2xl tracking-tight">Projects</h2>
                 <Link
                     href="/projects"
                     className="jetbrains-mono text-xs text-muted-foreground hover:text-foreground transition-colors"

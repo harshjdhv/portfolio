@@ -136,7 +136,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
           >
-            <h2 className="jetbrains-mono text-sm font-medium tracking-tight">Experience</h2>
+            <h2 className="instrument-serif text-2xl tracking-tight">Experience</h2>
             <ExperienceSection />
           </motion.section>
 
@@ -147,7 +147,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
           >
-            <h2 className="jetbrains-mono text-sm font-medium tracking-tight">Skills</h2>
+            <h2 className="instrument-serif text-2xl tracking-tight">Skills</h2>
             <SkillsSection />
           </motion.section>
 
@@ -161,52 +161,14 @@ export default function Home() {
             <ProjectsSection />
           </motion.section>
 
-          {/* Latest Thought */}
-          {latestPost && (
-            <motion.section 
-              className="flex flex-col gap-6 border-b border-dashed px-4 sm:px-6 py-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-            >
-              <h2 className="jetbrains-mono text-sm font-medium tracking-tight">Latest Thought</h2>
-              
-              <Link 
-                href={`/thoughts/${latestPost.slug}`}
-                className="flex flex-col gap-3 border border-dashed rounded-sm p-4 bg-muted/20 hover:bg-muted/30 transition-colors group"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <h3 className="jetbrains-mono text-sm font-medium tracking-tight group-hover:text-foreground transition-colors flex-1">
-                    {latestPost.title}
-                  </h3>
-                  <span className="jetbrains-mono text-xs text-muted-foreground group-hover:text-foreground transition-colors whitespace-nowrap">
-                    Read →
-                  </span>
-                </div>
-                {latestPost.excerpt && (
-                  <p className="jetbrains-mono text-xs text-muted-foreground tracking-tight">
-                    {latestPost.excerpt}
-                  </p>
-                )}
-              </Link>
-
-              <Link 
-                href="/thoughts"
-                className="jetbrains-mono text-xs text-muted-foreground hover:text-foreground transition-colors"
-              >
-                All thoughts →
-              </Link>
-            </motion.section>
-          )}
-
           {/* Newsletter Subscribe */}
           <motion.section 
             className="flex flex-col gap-6 border-b border-dashed px-4 sm:px-6 py-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
           >
-            <h2 className="jetbrains-mono text-sm font-medium tracking-tight">Subscribe</h2>
+            <h2 className="instrument-serif text-2xl tracking-tight">Subscribe</h2>
             <p className="jetbrains-mono text-xs text-muted-foreground tracking-tight">Get notified when I publish something new.</p>
             <form onSubmit={handleSubscribe} className="flex gap-2">
               <input
@@ -236,7 +198,7 @@ export default function Home() {
             className="flex flex-col gap-4 px-4 sm:px-6 py-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
           >
             <p className="jetbrains-mono text-xs text-muted-foreground tracking-tight text-center">
               © 2024 Harsh Jadhav. Built with Next.js
