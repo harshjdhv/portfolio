@@ -3,7 +3,6 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 import ExperienceSection from "@/components/sections/ExperienceSection";
-import EducationSection from "@/components/sections/EducationSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 import { FloatingDockDemo } from "@/components/sections/dock-example";
@@ -141,23 +140,12 @@ export default function Home() {
             <ExperienceSection />
           </motion.section>
 
-          {/* Education */}
-          <motion.section 
-            className="flex flex-col gap-6 border-b border-dashed px-4 sm:px-6 py-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-          >
-            <h2 className="jetbrains-mono text-sm font-medium tracking-tight">Education</h2>
-            <EducationSection />
-          </motion.section>
-
           {/* Skills */}
           <motion.section 
             className="flex flex-col gap-6 border-b border-dashed px-4 sm:px-6 py-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
           >
             <h2 className="jetbrains-mono text-sm font-medium tracking-tight">Skills</h2>
             <SkillsSection />
@@ -168,7 +156,7 @@ export default function Home() {
             className="flex flex-col gap-6 border-b border-dashed px-4 sm:px-6 py-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
+            transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
           >
             <ProjectsSection />
           </motion.section>
@@ -179,7 +167,7 @@ export default function Home() {
               className="flex flex-col gap-6 border-b border-dashed px-4 sm:px-6 py-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+              transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
             >
               <h2 className="jetbrains-mono text-sm font-medium tracking-tight">Latest Thought</h2>
               
@@ -216,7 +204,7 @@ export default function Home() {
             className="flex flex-col gap-6 border-b border-dashed px-4 sm:px-6 py-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
           >
             <h2 className="jetbrains-mono text-sm font-medium tracking-tight">Subscribe</h2>
             <p className="jetbrains-mono text-xs text-muted-foreground tracking-tight">Get notified when I publish something new.</p>
@@ -248,7 +236,7 @@ export default function Home() {
             className="flex flex-col gap-4 px-4 sm:px-6 py-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }}
+            transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
           >
             <p className="jetbrains-mono text-xs text-muted-foreground tracking-tight text-center">
               © 2024 Harsh Jadhav. Built with Next.js

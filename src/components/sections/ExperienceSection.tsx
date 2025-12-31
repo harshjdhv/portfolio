@@ -1,11 +1,11 @@
-import React from 'react';
+import Link from 'next/link';
 
 type ExperienceItem = {
   company: string;
   position: string;
   period: string;
   description: string;
-  technologies: string[];
+  url?: string;
 };
 
 const ExperienceSection = () => {
@@ -13,29 +13,52 @@ const ExperienceSection = () => {
     {
       company: "Freelance",
       position: "Full Stack Developer",
-      period: "Mar 2023 - Present",
-      description: "Building AI-powered web applications and scalable solutions.",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "AI Integration", "Next.js", "TypeScript"]
+      period: "2023 — Present",
+      description: "Building web apps, crypto infrastructure, and AI-powered tools for clients worldwide.",
     },
     {
       company: "CSRBOX",
-      position: "IBM SkillsBuild Summer Intern",
-      period: "Jun 2024 - Aug 2024",
-      description: "Front-end development with focus on accessibility and UI/UX.",
-      technologies: ["HTML", "CSS", "JavaScript", "React", "UI/UX", "Project Management"]
+      position: "IBM SkillsBuild Intern",
+      period: "2024",
+      description: "Front-end development focused on accessibility and responsive design.",
+      url: "https://csrbox.org",
     }
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    <div className="flex flex-col">
       {experiences.map((exp, index) => (
-        <div key={index} className="flex flex-col gap-3 border border-dashed rounded-sm p-4 bg-muted/20">
-          <div className="flex flex-col gap-1">
-            <h3 className="jetbrains-mono text-sm font-medium tracking-tight">{exp.position}</h3>
-            <p className="jetbrains-mono text-xs text-muted-foreground tracking-tight">{exp.company}</p>
+        <div 
+          key={index} 
+          className={`py-4 ${index !== experiences.length - 1 ? "border-b border-dashed" : ""}`}
+        >
+          <div className="flex items-center justify-between gap-4 mb-1">
+            <div className="flex items-center gap-2">
+              <h3 className="jetbrains-mono text-sm font-medium tracking-tight">
+                {exp.position}
+              </h3>
+              <span className="text-muted-foreground/30">·</span>
+              {exp.url ? (
+                <Link 
+                  href={exp.url} 
+                  target="_blank"
+                  className="jetbrains-mono text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {exp.company} ↗
+                </Link>
+              ) : (
+                <span className="jetbrains-mono text-xs text-muted-foreground">
+                  {exp.company}
+                </span>
+              )}
+            </div>
+            <span className="jetbrains-mono text-[10px] text-muted-foreground shrink-0">
+              {exp.period}
+            </span>
           </div>
-          <p className="jetbrains-mono text-xs text-muted-foreground tracking-tight">{exp.description}</p>
-          <div className="jetbrains-mono text-xs text-muted-foreground tracking-tight">{exp.period}</div>
+          <p className="jetbrains-mono text-xs text-muted-foreground tracking-tight leading-relaxed">
+            {exp.description}
+          </p>
         </div>
       ))}
     </div>
