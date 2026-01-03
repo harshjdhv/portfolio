@@ -15,7 +15,7 @@ const projects: Project[] = [
         title: "Componentry",
         description: "Modern UI component library with accessible, customizable components for React applications.",
         technologies: ["React", "TypeScript", "Tailwind", "Storybook"],
-        liveUrl: "https://componentry.harshjdhv.com",
+        liveUrl: "https://componentry.fun",
         githubUrl: "https://github.com/jadhavharshh/componentry",
     },
     {
