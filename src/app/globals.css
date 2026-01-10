@@ -140,6 +140,10 @@ html {
     font-family: 'Doto', sans-serif;
   }
   
+  .font-geist {
+    font-family: var(--font-geist), 'Geist', sans-serif;
+  }
+  
   .jetbrains-mono {
     font-family: 'JetBrains Mono', monospace;
   }

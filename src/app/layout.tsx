@@ -1,14 +1,15 @@
 // app/layout.tsx
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
-import { 
-  Doto, 
-  JetBrains_Mono, 
+import {
+  Doto,
+  JetBrains_Mono,
   Figtree,
   Instrument_Serif,
   Instrument_Sans,
   Urbanist,
-  Bricolage_Grotesque
+  Bricolage_Grotesque,
+  Geist
 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next"
 
@@ -52,6 +53,11 @@ const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-bricolage-grotesque",
   weight: ["400", "500", "600", "700"],
+});
+
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
 });
 
 export const metadata = {
@@ -107,9 +113,9 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html 
-      lang="en" 
-      className={`${doto.variable} ${jetbrains.variable} ${figtree.variable} ${instrumentSerif.variable} ${instrumentSans.variable} ${urbanist.variable} ${bricolageGrotesque.variable}`}
+    <html
+      lang="en"
+      className={`${doto.variable} ${jetbrains.variable} ${figtree.variable} ${instrumentSerif.variable} ${instrumentSans.variable} ${urbanist.variable} ${bricolageGrotesque.variable} ${geist.variable}`}
       suppressHydrationWarning
     >
       <body>
