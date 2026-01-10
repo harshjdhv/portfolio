@@ -504,6 +504,12 @@ export default function Page() {
               overflow: 'hidden'
             }}
           >
+            {/* Projects Header */}
+            <div className="w-full pb-6">
+              <h2 className="text-[24px] font-medium tracking-[-0.04em] leading-[1.2em] text-[#121212]">
+                Selected Projects
+              </h2>
+            </div>
             {/* Projects list - gap: 20px */}
             <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '20px' }}>
               {projects.map((project) => (

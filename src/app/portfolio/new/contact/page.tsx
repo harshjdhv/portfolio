@@ -13,6 +13,25 @@ function XIcon() {
     );
 }
 
+function InstagramIcon() {
+    return (
+        <svg viewBox="0 0 24 24" className="w-[18px] h-[18px]" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+        </svg>
+    );
+}
+
+function DribbbleIcon() {
+    return (
+        <svg viewBox="0 0 24 24" className="w-[18px] h-[18px]" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94" />
+            <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32" />
+            <path d="M8.56 2.75c4.37 6 6.53 12.07 6.9 19.25" />
+        </svg>
+    );
+}
+
 // Local Time Component
 function LocalTime() {
     const [time, setTime] = useState("");
@@ -260,162 +279,122 @@ export default function ContactPage() {
                     }}
                 >
 
-                    {/* Description */}
+                    {/* Main Content Area */}
                     <div
-                        className="lg:sticky lg:top-[140px] lg:z-1 lg:bg-white px-3 lg:px-4 pb-2"
+                        className="w-full flex flex-col gap-8"
                         style={{
-                            width: '100%',
-                            height: 'min-content',
-                            padding: '0',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'flex-start',
-                            alignItems: 'flex-start',
-                            gap: '8px',
-                            overflow: 'visible'
+                            margin: '0 auto',
+                            paddingBottom: '120px'
                         }}
                     >
-                        <h2
-                            className="text-[24px] font-medium tracking-[-0.04em] leading-[1.2em] text-left"
-                            style={{ width: '100%', maxWidth: '600px' }}
-                        >
-                            <span className="text-[#121212]">Have a project in mind? Looking to collaborate? </span>
-                            <span className="text-[#121212]">— </span>
-                            <span className="text-[#757575]">I&apos;m always open to discussing new opportunities and interesting ideas.</span>
-                        </h2>
-                    </div>
+                        {/* Header Section */}
+                        <div className="flex flex-col gap-3">
+                            <h1 className="text-[64px] font-semibold tracking-[-0.04em] leading-[0.9em] text-[#121212]">
+                                Reach out.
+                            </h1>
+                            <p className="text-[18px] font-medium tracking-[-0.02em] leading-[1.5em] text-[#757575] max-w-[500px]">
+                                I&apos;d love to hear from you. Whether you&apos;re looking to collaborate on a new project, discuss a commission, or simply say hello.
+                            </p>
+                        </div>
 
-                    {/* Contact Cards */}
-                    <div
-                        className="min-h-[60vh] flex items-start justify-center pt-20"
-                        style={{
-                            width: '100%',
-                            padding: '80px 0',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'flex-start',
-                            alignItems: 'center',
-                            gap: '16px',
-                            backgroundColor: '#fff'
-                        }}
-                    >
-                        {/* Email */}
-                        <a
-                            href="mailto:hey@harshjdhv.com"
-                            className="group w-full max-w-[600px] p-6 rounded-xl border border-[#e3e3e3] hover:border-[#121212] hover:bg-[#fafafa] transition-all duration-300"
-                        >
-                            <div className="flex items-center justify-between">
-                                <div className="flex flex-col gap-1">
-                                    <span className="text-[14px] font-medium tracking-[-0.02em] leading-[1em] text-[#757575]">
-                                        Email
-                                    </span>
-                                    <span className="text-[20px] font-medium tracking-[-0.03em] leading-[1.4em] text-[#121212]">
-                                        hey@harshjdhv.com
-                                    </span>
-                                </div>
-                                <div className="w-10 h-10 rounded-full bg-[#f5f5f5] group-hover:bg-[#121212] flex items-center justify-center transition-all duration-300">
-                                    <svg viewBox="0 0 24 24" className="w-5 h-5 text-[#757575] group-hover:text-white transition-colors" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <path d="M7 17L17 7M17 7H7M17 7V17" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </div>
+                        {/* Contact Info & Socials Row */}
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 pb-8 border-b border-[#e3e3e3]">
+                            <div className="flex flex-col gap-1">
+                                <a href="mailto:hey@harshjdhv.com" className="text-[16px] font-medium tracking-[-0.02em] text-[#121212] hover:text-[#757575] transition-colors">
+                                    hey@harshjdhv.com
+                                </a>
+                                <span className="text-[16px] font-medium tracking-[-0.02em] text-[#121212]">
+                                    +91 99999 99999
+                                </span>
                             </div>
-                        </a>
+                            <div className="flex items-center gap-4">
+                                <a href="https://x.com/harshjdhv" target="_blank" rel="noopener" className="w-8 h-8 flex items-center justify-center text-[#121212] hover:text-[#757575] transition-colors">
+                                    <XIcon />
+                                </a>
+                                <a href="https://instagram.com" target="_blank" rel="noopener" className="w-8 h-8 flex items-center justify-center text-[#121212] hover:text-[#757575] transition-colors">
+                                    <InstagramIcon />
+                                </a>
+                                <a href="https://dribbble.com" target="_blank" rel="noopener" className="w-8 h-8 flex items-center justify-center text-[#121212] hover:text-[#757575] transition-colors">
+                                    <DribbbleIcon />
+                                </a>
+                            </div>
+                        </div>
 
-                        {/* Twitter */}
-                        <a
-                            href="https://x.com/harshjdhv"
-                            target="_blank"
-                            rel="noopener"
-                            className="group w-full max-w-[600px] p-6 rounded-xl border border-[#e3e3e3] hover:border-[#121212] hover:bg-[#fafafa] transition-all duration-300"
-                        >
-                            <div className="flex items-center justify-between">
-                                <div className="flex flex-col gap-1">
-                                    <span className="text-[14px] font-medium tracking-[-0.02em] leading-[1em] text-[#757575]">
-                                        Twitter / X
-                                    </span>
-                                    <span className="text-[20px] font-medium tracking-[-0.03em] leading-[1.4em] text-[#121212]">
-                                        @harshjdhv
-                                    </span>
-                                </div>
-                                <div className="w-10 h-10 rounded-full bg-[#f5f5f5] group-hover:bg-[#121212] flex items-center justify-center transition-all duration-300">
-                                    <svg viewBox="0 0 24 24" className="w-5 h-5 text-[#757575] group-hover:text-white transition-colors" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <path d="M7 17L17 7M17 7H7M17 7V17" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </a>
+                        {/* Form Section */}
+                        <form className="flex flex-col gap-6">
 
-                        {/* LinkedIn */}
-                        <a
-                            href="https://linkedin.com/in/harshjdhv"
-                            target="_blank"
-                            rel="noopener"
-                            className="group w-full max-w-[600px] p-6 rounded-xl border border-[#e3e3e3] hover:border-[#121212] hover:bg-[#fafafa] transition-all duration-300"
-                        >
-                            <div className="flex items-center justify-between">
-                                <div className="flex flex-col gap-1">
-                                    <span className="text-[14px] font-medium tracking-[-0.02em] leading-[1em] text-[#757575]">
-                                        LinkedIn
-                                    </span>
-                                    <span className="text-[20px] font-medium tracking-[-0.03em] leading-[1.4em] text-[#121212]">
-                                        Harsh Jadhav
-                                    </span>
-                                </div>
-                                <div className="w-10 h-10 rounded-full bg-[#f5f5f5] group-hover:bg-[#121212] flex items-center justify-center transition-all duration-300">
-                                    <svg viewBox="0 0 24 24" className="w-5 h-5 text-[#757575] group-hover:text-white transition-colors" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <path d="M7 17L17 7M17 7H7M17 7V17" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </div>
+                            {/* Name Input */}
+                            <div className="flex flex-col gap-2">
+                                <label htmlFor="name" className="text-[15px] font-medium tracking-[-0.02em] text-[#121212]">
+                                    Name*
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="John" // Placeholder from screenshot
+                                    className="w-full pb-3 bg-transparent border-b border-[#e3e3e3] text-[16px] font-medium text-[#121212] placeholder:text-[#a3a3a3] outline-none focus:border-[#121212] transition-colors"
+                                    required
+                                />
                             </div>
-                        </a>
 
-                        {/* GitHub */}
-                        <a
-                            href="https://github.com/jadhavharshh"
-                            target="_blank"
-                            rel="noopener"
-                            className="group w-full max-w-[600px] p-6 rounded-xl border border-[#e3e3e3] hover:border-[#121212] hover:bg-[#fafafa] transition-all duration-300"
-                        >
-                            <div className="flex items-center justify-between">
-                                <div className="flex flex-col gap-1">
-                                    <span className="text-[14px] font-medium tracking-[-0.02em] leading-[1em] text-[#757575]">
-                                        GitHub
-                                    </span>
-                                    <span className="text-[20px] font-medium tracking-[-0.03em] leading-[1.4em] text-[#121212]">
-                                        jadhavharshh
-                                    </span>
-                                </div>
-                                <div className="w-10 h-10 rounded-full bg-[#f5f5f5] group-hover:bg-[#121212] flex items-center justify-center transition-all duration-300">
-                                    <svg viewBox="0 0 24 24" className="w-5 h-5 text-[#757575] group-hover:text-white transition-colors" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <path d="M7 17L17 7M17 7H7M17 7V17" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </div>
+                            {/* Email Input */}
+                            <div className="flex flex-col gap-2">
+                                <label htmlFor="email" className="text-[15px] font-medium tracking-[-0.02em] text-[#121212]">
+                                    Email*
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="contact@gmail.com" // Placeholder from screenshot
+                                    className="w-full pb-3 bg-transparent border-b border-[#e3e3e3] text-[16px] font-medium text-[#121212] placeholder:text-[#a3a3a3] outline-none focus:border-[#121212] transition-colors"
+                                    required
+                                />
                             </div>
-                        </a>
 
-                        {/* Book a Call */}
-                        <a
-                            href="https://cal.com/"
-                            target="_blank"
-                            rel="noopener"
-                            className="group w-full max-w-[600px] p-6 rounded-xl bg-[#121212] hover:bg-[#000] transition-all duration-300"
-                        >
-                            <div className="flex items-center justify-between">
-                                <div className="flex flex-col gap-1">
-                                    <span className="text-[14px] font-medium tracking-[-0.02em] leading-[1em] text-[#757575]">
-                                        Schedule a meeting
-                                    </span>
-                                    <span className="text-[20px] font-medium tracking-[-0.03em] leading-[1.4em] text-white">
-                                        Book a Call
-                                    </span>
-                                </div>
-                                <div className="w-10 h-10 rounded-full bg-white/20 group-hover:bg-white/30 flex items-center justify-center transition-all duration-300">
-                                    <svg viewBox="0 0 24 24" className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <path d="M7 17L17 7M17 7H7M17 7V17" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </div>
+                            {/* Phone Input */}
+                            <div className="flex flex-col gap-2">
+                                <label htmlFor="phone" className="text-[15px] font-medium tracking-[-0.02em] text-[#121212]">
+                                    Phone
+                                </label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="+1 (123) 456-7890" // Placeholder from screenshot
+                                    className="w-full pb-3 bg-transparent border-b border-[#e3e3e3] text-[16px] font-medium text-[#121212] placeholder:text-[#a3a3a3] outline-none focus:border-[#121212] transition-colors"
+                                />
                             </div>
-                        </a>
+
+                            {/* Message Input */}
+                            <div className="flex flex-col gap-2">
+                                <label htmlFor="message" className="text-[15px] font-medium tracking-[-0.02em] text-[#121212]">
+                                    Message*
+                                </label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows={6}
+                                    placeholder="Project inquiry..." // Placeholder from screenshot
+                                    className="w-full pb-3 bg-transparent border-b border-[#e3e3e3] text-[16px] font-medium text-[#121212] placeholder:text-[#a3a3a3] outline-none focus:border-[#121212] transition-colors resize-y min-h-[100px]"
+                                    required
+                                />
+                            </div>
+
+                            {/* Divider above button */}
+                            <div className="w-full h-px bg-[#e3e3e3] mt-2" />
+
+                            {/* Submit Button */}
+                            <div className="flex justify-start">
+                                <button
+                                    type="submit"
+                                    className="text-[16px] font-semibold tracking-[-0.02em] text-[#121212] hover:text-[#757575] transition-colors"
+                                >
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </section>
 
