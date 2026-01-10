@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
+import { Calendar, Mail } from "lucide-react";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import SkillsSection from "@/components/sections/SkillsSection";
@@ -47,12 +48,12 @@ export default function Home() {
         <div className="new-container relative !border-none sm:!border-dashed w-full">
           {/* Hero Section */}
           <motion.section
-            className="relative flex flex-col items-start gap-6 border-y border-dashed px-4 sm:px-6 py-8 mt-32 overflow-hidden"
+            className="relative flex flex-col items-start gap-8 sm:gap-10 border-y border-dashed px-4 sm:px-6 py-12 sm:py-16 mt-32 overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <div className="flex flex-col gap-6 w-full relative z-10">
+            <div className="flex flex-col gap-8 w-full relative z-10">
               <div className="flex items-start justify-between w-full">
                 <div className="flex flex-row items-center gap-4">
                   <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border border-dashed border-muted-foreground/20 shrink-0">
@@ -75,22 +76,30 @@ export default function Home() {
               </div>
 
               <p className="jetbrains-mono text-sm text-muted-foreground max-w-xl tracking-tight leading-relaxed">
-                Building things that people use. Shipping fast, learning faster. Currently neck-deep in <span className="text-foreground font-medium">Solana</span> and <span className="text-foreground font-medium">Web3</span>.
+                Building things that people use. Shipping fast, learning faster.
+                <br className="hidden sm:block" />
+                Currently neck-deep in <span className="text-foreground font-medium">Solana</span> and <span className="text-foreground font-medium">Web3</span>, exploring <span className="text-foreground font-medium">AI</span>, freelancing, and occasionally touching grass.
+                <br className="hidden sm:block" />
+                If it compiles and works, it ships. Sometimes I write about it too.
               </p>
 
               <div className="flex flex-wrap items-center gap-3">
-                <button
-                  onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="jetbrains-mono text-xs px-4 py-2 border border-dashed rounded-sm hover:bg-muted/20 transition-colors"
+                <a
+                  href="https://cal.com/harshjdhv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2 jetbrains-mono text-xs px-4 py-2 bg-foreground text-background rounded-md hover:opacity-90 transition-all"
                 >
-                  View work →
-                </button>
+                  <Calendar className="w-3.5 h-3.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                  Book a call
+                </a>
                 <a
                   href="https://x.com/harshjdhv"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="jetbrains-mono text-xs px-4 py-2 border border-dashed rounded-sm bg-[rgba(96,125,255,0.12)] hover:bg-[rgba(96,125,255,0.18)] transition-colors"
+                  className="group flex items-center gap-2 jetbrains-mono text-xs px-4 py-2 border border-border rounded-md hover:bg-muted/50 transition-colors"
                 >
+                  <Mail className="w-3.5 h-3.5 group-hover:rotate-12 transition-transform duration-300" />
                   Say hello
                 </a>
               </div>
