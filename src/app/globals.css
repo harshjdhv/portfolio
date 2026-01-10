@@ -48,7 +48,7 @@ html {
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  
+
   /* Maelle Portfolio Colors */
   --color-maelle-white: #ffffff;
   --color-maelle-dark: #121212;
@@ -130,73 +130,72 @@ html {
     @apply border-border outline-ring/50;
     font-family: 'figtree', sans-serif;
   }
+
   body {
     @apply bg-background text-foreground antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   .font-doto {
     font-family: 'Doto', sans-serif;
   }
-  
+
   .font-geist {
     font-family: var(--font-geist), 'Geist', sans-serif;
   }
-  
+
   .jetbrains-mono {
     font-family: 'JetBrains Mono', monospace;
   }
-  
+
   .instrument-serif {
     font-family: var(--font-instrument-serif);
   }
-  
+
   .instrument-sans {
     font-family: var(--font-instrument-sans);
   }
-  
+
   .urbanist {
     font-family: var(--font-urbanist);
   }
-  
+
   .bricolage-grotesque {
     font-family: var(--font-bricolage-grotesque);
   }
-  
+
   ::-webkit-scrollbar {
     width: 8px;
   }
-  
+
   ::-webkit-scrollbar-track {
     background: var(--background);
   }
-  
+
   ::-webkit-scrollbar-thumb {
     background: var(--muted);
     border-radius: 4px;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
     background: var(--muted-foreground);
   }
 }
 
 .new-container {
-  @apply mx-auto flex max-w-[1000px] flex-col border-x border-dashed;
+  @apply mx-auto flex max-w-[700px] flex-col border-x border-dashed;
 }
 
 .bg-dashed {
-  background-image: linear-gradient(
-    45deg,
-    var(--border) 12.5%,
-    transparent 12.5%,
-    transparent 50%,
-    var(--border) 50%,
-    var(--border) 62.5%,
-    transparent 62.5%,
-    transparent 100%
-  );
+  background-image: linear-gradient(45deg,
+      var(--border) 12.5%,
+      transparent 12.5%,
+      transparent 50%,
+      var(--border) 50%,
+      var(--border) 62.5%,
+      transparent 62.5%,
+      transparent 100%);
   background-size: 0.25rem 0.25rem;
 }
 
@@ -204,6 +203,7 @@ html {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -213,6 +213,7 @@ html {
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(0);
   }
