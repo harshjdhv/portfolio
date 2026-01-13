@@ -31,7 +31,7 @@ export default function Home() {
               Building on Solana.
               <br />Web interfaces. Crypto tooling.
               <br />
-              <Link href="mailto:harshjdhv.com" className="hover:text-neutral-900 transition-colors">
+              <Link href="mailto:hello@harshjdhv.com" className="font-semibold text-neutral-800 hover:text-neutral-900 transition-colors">
                 hello@harshjdhv.com
               </Link>
             </div>
@@ -44,12 +44,18 @@ export default function Home() {
           {/* Abstract / Intro */}
           <article className="flex flex-col gap-5">
             <h2 className="font-serif-accent text-2xl md:text-3xl text-neutral-900 leading-snug max-w-[42ch]">
-              Building software across interfaces and application logic.
+              Building software across interfaces and logic.
             </h2>
-            <p className="text-neutral-600 text-base leading-relaxed max-w-[50ch]">
-              Software engineer working on user-facing applications and blockchain-integrated workflows.
-              Recent work spans interface development, payment flows, and crypto tooling. Currently working independently and learning in public.
-            </p>
+            <div className="flex flex-col gap-4 max-w-[50ch]">
+              <p className="text-neutral-600 text-base leading-relaxed">
+                I got into software by messing around and trying to understand how things work.
+                I stayed because building things from zero is addictive.
+              </p>
+              <p className="text-neutral-600 text-base leading-relaxed">
+                I work on user-facing software and the logic behind it.
+                If it's boring and reliable, it's good enough to ship.
+              </p>
+            </div>
           </article>
 
           {/* 01. EXPERIENCE */}
@@ -260,7 +266,7 @@ export default function Home() {
               <h3 className="font-medium text-neutral-900 text-base">B.E. Computer Science</h3>
               <div className="flex items-center gap-3">
                 <span className="text-neutral-500 text-sm">Mumbai University</span>
-                <span className="font-mono-meta text-xs text-neutral-400">2021</span>
+                <span className="font-mono-meta text-xs text-neutral-400">2021 - 2026</span>
               </div>
             </div>
           </div>
