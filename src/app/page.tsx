@@ -1,4 +1,7 @@
 import Link from "next/link";
+import { ModeToggle } from "@/components/mode-toggle";
+import { CopyEmail } from "@/components/copy-email";
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -10,12 +13,12 @@ export default function Home() {
         Col 4:   Gutter/Silence.
         Col 5-11:The "Stream" (Content).
       */}
-      <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-12 px-6 py-12 md:py-32">
+      <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-x-10 px-6 py-12 md:py-20">
 
         {/* -- BLock 1: Identity (The Anchor) -- */}
-        <header className="md:col-span-3 md:col-start-1 md:sticky md:top-32 h-fit flex flex-col gap-8 select-none">
+        <header className="md:col-span-3 md:col-start-1 md:sticky md:top-20 h-fit flex flex-col gap-8 select-none">
           <div className="flex flex-col gap-2">
-            <h1 className="font-serif-accent text-3xl md:text-3xl  text-neutral-900 leading-tight">
+            <h1 className="font-serif-accent text-3xl md:text-3xl text-foreground leading-tight">
               Harsh Jadhav
             </h1>
             <span className="font-mono-meta text-[11px] text-neutral-400 font-medium uppercase tracking-widest pl-0.5">
@@ -23,64 +26,66 @@ export default function Home() {
             </span>
           </div>
 
-          <div className="flex flex-col gap-3 pt-2">
-            <div className="font-mono-meta text-[10px] text-neutral-300 uppercase tracking-widest">
-              Status
+          <div className="flex flex-col gap-4 pt-2">
+            <div className="flex flex-col gap-3">
+              <div className="font-mono-meta text-[10px] text-neutral-300 uppercase tracking-widest">
+                Status
+              </div>
+              <div className="text-sm text-muted-foreground leading-relaxed max-w-[240px]">
+                Building on Solana. <br />
+                Web interfaces. Crypto tooling.
+                <br /><br />
+                I build things from zero. If it's boring and reliable, it's good enough to ship.
+                <div className="pt-3">
+                  <CopyEmail />
+                </div>
+              </div>
             </div>
-            <div className="text-sm text-neutral-600 leading-snug max-w-[200px]">
-              Building on Solana.
-              <br />Web interfaces. Crypto tooling.
-              <br />
-              <Link href="mailto:hello@harshjdhv.com" className="font-semibold text-neutral-800 hover:text-neutral-900 transition-colors">
-                hello@harshjdhv.com
-              </Link>
+
+            <div className="flex items-center gap-4 pt-2">
+              <ModeToggle />
+              <div className="w-px h-4 bg-border"></div>
+              <div className="flex items-center gap-4 text-muted-foreground">
+                <Link href="https://github.com/harshjdhv" target="_blank" className="hover:text-foreground transition-colors">
+                  <FaGithub size={16} />
+                </Link>
+                <Link href="https://x.com/harshjdhv" target="_blank" className="hover:text-foreground transition-colors">
+                  <FaXTwitter size={16} />
+                </Link>
+                <Link href="https://linkedin.com/in/jadhavharsh" target="_blank" className="hover:text-foreground transition-colors">
+                  <FaLinkedin size={16} />
+                </Link>
+              </div>
             </div>
           </div>
         </header>
 
         {/* -- Block 2: The Stream (Content) -- */}
-        <section className="md:col-span-7 md:col-start-5 flex flex-col gap-16 md:gap-24">
+        <section className="md:col-span-7 md:col-start-5 flex flex-col gap-10 md:gap-14">
 
-          {/* Abstract / Intro */}
-          <article className="flex flex-col gap-5">
-            <h2 className="font-serif-accent text-2xl md:text-3xl text-neutral-900 leading-snug max-w-[42ch]">
-              Building software across interfaces and logic.
-            </h2>
-            <div className="flex flex-col gap-4 max-w-[50ch]">
-              <p className="text-neutral-600 text-base leading-relaxed">
-                I got into software by messing around and trying to understand how things work.
-                I stayed because building things from zero is addictive.
-              </p>
-              <p className="text-neutral-600 text-base leading-relaxed">
-                I work on user-facing software and the logic behind it.
-                If it's boring and reliable, it's good enough to ship.
-              </p>
-            </div>
-          </article>
+
 
           {/* 01. EXPERIENCE */}
-          <div className="flex flex-col gap-10">
-            <div className="font-mono-meta text-[10px] text-neutral-400 uppercase tracking-widest border-b border-neutral-100 pb-3 w-full">
-              01. Experience
+          <div className="flex flex-col gap-6 max-w-[55ch]">
+            <div className="font-mono-meta text-[10px] text-neutral-400 uppercase tracking-widest border-b border-border pb-3 w-full">
+              Experience
             </div>
 
-            <div className="flex flex-col gap-16">
+            <div className="flex flex-col gap-8">
               {/* Role 1 */}
               <div className="group flex flex-col gap-4">
                 <div className="flex flex-col gap-1">
-                  <h3 className="font-medium text-neutral-900 text-base">Software Engineer (Independent)</h3>
+                  <h3 className="font-medium text-foreground text-base">Software Engineer (Independent)</h3>
                   <div className="flex items-center gap-3 text-sm">
-                    <span className="text-neutral-500">Independent</span>
+                    <span className="text-muted-foreground">Independent</span>
                     <span className="w-1 h-1 rounded-full bg-neutral-300"></span>
                     <span className="font-mono-meta text-xs text-neutral-400">2023 — Present</span>
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-3 pl-0 md:pl-0">
-                  <p className="text-sm text-neutral-700 max-w-[55ch] leading-relaxed">
-                    Working on web applications and crypto-related tooling for early-stage products.
-                    Projects include payment platforms, wallet integrations, and reusable interface systems.
-                    Work spans frontend-heavy systems with supporting backend and on-chain components.
+                  <p className="text-sm text-muted-foreground max-w-[55ch] leading-relaxed">
+                    Building web apps and crypto tooling for early-stage products. Work spans payment platforms, wallet integrations, and interface systems.
                   </p>
                 </div>
               </div>
@@ -88,15 +93,15 @@ export default function Home() {
               {/* Role 2 */}
               <div className="group flex flex-col gap-4">
                 <div className="flex flex-col gap-1">
-                  <h3 className="font-medium text-neutral-900 text-base">Frontend Intern</h3>
+                  <h3 className="font-medium text-foreground text-base">Frontend Intern</h3>
                   <div className="flex items-center gap-3 text-sm">
-                    <span className="text-neutral-500">CSRBOX (IBM SkillsBuild)</span>
+                    <span className="text-muted-foreground">CSRBOX (IBM SkillsBuild)</span>
                     <span className="w-1 h-1 rounded-full bg-neutral-300"></span>
                     <span className="font-mono-meta text-xs text-neutral-400">2023</span>
                   </div>
                 </div>
                 <div className="flex flex-col gap-3 pl-0 md:pl-0">
-                  <p className="text-sm text-neutral-700 max-w-[55ch] leading-relaxed">
+                  <p className="text-sm text-muted-foreground max-w-[55ch] leading-relaxed">
                     Built accessible, responsive frontend components. Worked on form handling and layout systems.
                   </p>
                 </div>
@@ -105,12 +110,12 @@ export default function Home() {
           </div>
 
           {/* 02. SELECTED WORK */}
-          <div className="flex flex-col gap-10">
-            <div className="font-mono-meta text-[10px] text-neutral-400 uppercase tracking-widest border-b border-neutral-100 pb-3 w-full">
-              02. Selected Work
+          <div className="flex flex-col gap-6 max-w-[55ch]">
+            <div className="font-mono-meta text-[10px] text-neutral-400 uppercase tracking-widest border-b border-border pb-3 w-full">
+              Selected Work
             </div>
 
-            <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-8">
               {/* Project 1 - Componentry */}
               <Link
                 href="https://componentry.fun"
@@ -120,9 +125,9 @@ export default function Home() {
               >
                 <div className="flex flex-row items-center justify-between max-w-[55ch]">
                   <div className="flex items-center gap-2">
-                    <h3 className="font-medium text-neutral-900 text-base group-hover:text-neutral-600 transition-colors">Componentry</h3>
+                    <h3 className="font-medium text-foreground text-base group-hover:text-muted-foreground transition-colors">Componentry</h3>
                     <svg
-                      className="w-3.5 h-3.5 text-neutral-400 group-hover:text-neutral-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
+                      className="w-3.5 h-3.5 text-neutral-400 group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -133,7 +138,7 @@ export default function Home() {
                   </div>
                   <span className="font-mono-meta text-[10px] text-neutral-400 normal-case">React / TypeScript</span>
                 </div>
-                <p className="text-sm text-neutral-500 max-w-[55ch] leading-relaxed">
+                <p className="text-sm text-muted-foreground max-w-[55ch] leading-relaxed">
                   A UI component library. Includes accessible, customizable components for React applications. Published and maintained.
                 </p>
               </Link>
@@ -147,9 +152,9 @@ export default function Home() {
               >
                 <div className="flex flex-row items-center justify-between max-w-[55ch]">
                   <div className="flex items-center gap-2">
-                    <h3 className="font-medium text-neutral-900 text-base group-hover:text-neutral-600 transition-colors">GameSideVault</h3>
+                    <h3 className="font-medium text-foreground text-base group-hover:text-muted-foreground transition-colors">GameSideVault</h3>
                     <svg
-                      className="w-3.5 h-3.5 text-neutral-400 group-hover:text-neutral-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
+                      className="w-3.5 h-3.5 text-neutral-400 group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -160,7 +165,7 @@ export default function Home() {
                   </div>
                   <span className="font-mono-meta text-[10px] text-neutral-400 normal-case">Next.js / Solana</span>
                 </div>
-                <p className="text-sm text-neutral-500 max-w-[55ch] leading-relaxed">
+                <p className="text-sm text-muted-foreground max-w-[55ch] leading-relaxed">
                   Crypto wallet infrastructure with multi-chain support. Implements fund locking and automated releases.
                 </p>
               </Link>
@@ -174,9 +179,9 @@ export default function Home() {
               >
                 <div className="flex flex-row items-center justify-between max-w-[55ch]">
                   <div className="flex items-center gap-2">
-                    <h3 className="font-medium text-neutral-900 text-base group-hover:text-neutral-600 transition-colors">Perpetual Trading Platform</h3>
+                    <h3 className="font-medium text-foreground text-base group-hover:text-muted-foreground transition-colors">Perpetual Trading Platform</h3>
                     <svg
-                      className="w-3.5 h-3.5 text-neutral-400 group-hover:text-neutral-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
+                      className="w-3.5 h-3.5 text-neutral-400 group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -187,7 +192,7 @@ export default function Home() {
                   </div>
                   <span className="font-mono-meta text-[10px] text-neutral-400 normal-case">React / SEI</span>
                 </div>
-                <p className="text-sm text-neutral-500 max-w-[55ch] leading-relaxed">
+                <p className="text-sm text-muted-foreground max-w-[55ch] leading-relaxed">
                   Frontend for a perpetual futures trading interface. Includes wallet connection and real-time chart rendering.
                 </p>
               </Link>
@@ -201,9 +206,9 @@ export default function Home() {
               >
                 <div className="flex flex-row items-center justify-between max-w-[55ch]">
                   <div className="flex items-center gap-2">
-                    <h3 className="font-medium text-neutral-900 text-base group-hover:text-neutral-600 transition-colors">AnchorPay</h3>
+                    <h3 className="font-medium text-foreground text-base group-hover:text-muted-foreground transition-colors">AnchorPay</h3>
                     <svg
-                      className="w-3.5 h-3.5 text-neutral-400 group-hover:text-neutral-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
+                      className="w-3.5 h-3.5 text-neutral-400 group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -214,74 +219,28 @@ export default function Home() {
                   </div>
                   <span className="font-mono-meta text-[10px] text-neutral-400 normal-case">Next.js / Node.js</span>
                 </div>
-                <p className="text-sm text-neutral-500 max-w-[55ch] leading-relaxed">
+                <p className="text-sm text-muted-foreground max-w-[55ch] leading-relaxed">
                   Escrow payment platform. Freelancers and clients can lock funds against milestones.
                 </p>
               </Link>
             </div>
           </div>
 
-          {/* 03. TOOLING */}
-          <div className="flex flex-col gap-10">
-            <div className="font-mono-meta text-[10px] text-neutral-400 uppercase tracking-widest border-b border-neutral-100 pb-3 w-full">
-              03. Tooling
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-10 gap-x-8 max-w-[600px]">
-              <div className="flex flex-col gap-3">
-                <span className="text-[10px] text-neutral-400 font-mono-meta uppercase tracking-wider">Languages</span>
-                <ul className="text-sm text-neutral-600 flex flex-col gap-1.5 font-medium">
-                  <li>TypeScript</li>
-                  <li>JavaScript</li>
-                  <li>Python</li>
-                </ul>
-              </div>
-
-              <div className="flex flex-col gap-3">
-                <span className="text-[10px] text-neutral-400 font-mono-meta uppercase tracking-wider">Frameworks</span>
-                <ul className="text-sm text-neutral-600 flex flex-col gap-1.5 font-medium">
-                  <li>React</li>
-                  <li>Next.js</li>
-                  <li>Node.js</li>
-                </ul>
-              </div>
-
-              <div className="flex flex-col gap-3">
-                <span className="text-[10px] text-neutral-400 font-mono-meta uppercase tracking-wider">Other</span>
-                <ul className="text-sm text-neutral-600 flex flex-col gap-1.5 font-medium">
-                  <li>Solana / Anchor</li>
-                  <li>PostgreSQL</li>
-                  <li>Docker</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* 04. EDUCATION */}
-          <div className="flex flex-col gap-10">
-            <div className="font-mono-meta text-[10px] text-neutral-400 uppercase tracking-widest border-b border-neutral-100 pb-3 w-full">
-              04. Education
-            </div>
-            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4 max-w-[55ch]">
-              <h3 className="font-medium text-neutral-900 text-base">B.E Information Technology</h3>
-              <div className="flex items-center gap-3">
-                <span className="text-neutral-500 text-sm">Mumbai University</span>
-                <span className="font-mono-meta text-xs text-neutral-400">2021 - 2026</span>
-              </div>
-            </div>
-          </div>
 
 
-          {/* 05. WRITING */}
-          <div className="flex flex-col gap-10">
-            <div className="font-mono-meta text-[10px] text-neutral-400 uppercase tracking-widest border-b border-neutral-100 pb-3 w-full">
-              05. Writing
+
+
+
+          {/* 03. WRITING */}
+          <div className="flex flex-col gap-6 max-w-[55ch]">
+            <div className="font-mono-meta text-[10px] text-neutral-400 uppercase tracking-widest border-b border-border pb-3 w-full">
+              Writing
             </div>
 
             <ul className="flex flex-col gap-4">
-              <li className="flex items-center gap-4 text-sm text-neutral-600 hover:text-black transition-colors cursor-pointer group">
+              <li className="flex items-center gap-4 text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer group">
                 <span className="w-1.5 h-1.5 bg-neutral-300 rounded-full group-hover:bg-neutral-500 transition-colors"></span>
-                <span className="border-b border-transparent group-hover:border-neutral-900 decoration-1 underline-offset-4">
+                <span className="border-b border-transparent group-hover:border-foreground decoration-1 underline-offset-4">
                   On the fragility of complex UI
                 </span>
               </li>
@@ -289,14 +248,8 @@ export default function Home() {
           </div>
 
           {/* Footer / Contact (Minimal) */}
-          <footer className="pt-32 pb-16 flex flex-col gap-8 text-sm opacity-60 hover:opacity-100 transition-opacity duration-500">
-            <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-4 font-mono-meta text-xs text-neutral-500 max-w-[55ch]">
-              <div className="flex gap-6">
-                <Link href="mailto:hello@harshjdhv.com" className="hover:text-black transition-colors">Email</Link>
-                <Link href="https://github.com/harshjdhv" className="hover:text-black transition-colors">GitHub</Link>
-                <Link href="https://x.com/harshjdhv" className="hover:text-black transition-colors">X.com</Link>
-                <Link href="https://linkedin.com/in/jadhavharsh" className="hover:text-black transition-colors">LinkedIn</Link>
-              </div>
+          <footer className="pt-12 pb-12 flex flex-col gap-8 text-sm opacity-60 hover:opacity-100 transition-opacity duration-500">
+            <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-4 font-mono-meta text-xs text-muted-foreground max-w-[55ch]">
               <span className="text-neutral-400">© {new Date().getFullYear()} Harsh Jadhav</span>
             </div>
           </footer>
