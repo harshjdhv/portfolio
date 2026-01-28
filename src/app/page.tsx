@@ -206,7 +206,7 @@ export default function Home() {
                   <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
                     <span className="font-medium text-sm text-foreground group-hover:text-muted-foreground transition-colors">Rocket.Chat</span>
                     <span className="hidden sm:block text-neutral-400 text-xs">/</span>
-                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Fix video conference icons</span>
+                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Fix variable shadowing in Livechat API</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
@@ -221,7 +221,7 @@ export default function Home() {
                   <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
                     <span className="font-medium text-sm text-foreground group-hover:text-muted-foreground transition-colors">Cal.com</span>
                     <span className="hidden sm:block text-neutral-400 text-xs">/</span>
-                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Create Event modal responsive fix</span>
+                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Hide organizer email in workflows</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
@@ -236,7 +236,7 @@ export default function Home() {
                   <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
                     <span className="font-medium text-sm text-foreground group-hover:text-muted-foreground transition-colors">ActivePieces</span>
                     <span className="hidden sm:block text-neutral-400 text-xs">/</span>
-                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Custom API domain support</span>
+                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Fix Add Tool dialog overflow</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
@@ -251,7 +251,7 @@ export default function Home() {
                   <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
                     <span className="font-medium text-sm text-foreground group-hover:text-muted-foreground transition-colors">oss.now</span>
                     <span className="hidden sm:block text-neutral-400 text-xs">/</span>
-                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Project Card component</span>
+                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Fix navbar overflow on mobile</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
